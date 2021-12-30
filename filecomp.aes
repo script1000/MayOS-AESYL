@@ -1,0 +1,22 @@
+export(sys mayos.explorer.fileextension.aesl) {
+    url data = aesvr://pris.vr/id:mayos.main/code/ae/;
+    url aesl = data/aesl/;
+    compiler aesl-cmp = comp.aesl;
+
+    file_info {
+        name = "AE System Library";
+        description = "Executable System File Library";
+        extension = ".aesl";
+        aeFileId = "may/sys./aesl";
+        type = "-edit -read -write:exclude(-sys) -exec";
+    }
+    fileData *.aesl {
+        code syntax {
+            import-url(aesl/syntax/);
+        }
+        if(aesl-cmp.run.result = error) {
+            txt error = "Syntax Error:";
+            txt line = writeELoc() + writeELin();
+        }
+    }
+}
