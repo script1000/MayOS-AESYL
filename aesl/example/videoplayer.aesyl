@@ -1,0 +1,17 @@
+<aesyl>
+    <config>
+        <name>Video Player - {config.author}<name>
+        <author>MayOS System Library<author>
+        <id>may.example.videoP<id>
+        if(import = failed) {<show"import failed">}
+    <config>
+    <import onFail="failed">
+        <name="aesyl",dataUrl="aesvr://pris.vr/id:mayos.main/library/aesl/def/">
+        <name="video",dataUrl="aesvr://pris.vr/id:mayos.main/library/aesl/video/">
+    <import>
+    <data>
+        <viewport import="video">
+            <video url=control.url>
+            <control>
+        <viewport>
+    <data>

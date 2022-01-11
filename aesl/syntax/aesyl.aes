@@ -1,0 +1,7 @@
+export(aesyl.stax.aesyl) {
+    if(resceived = syntaxrun) {
+        if(this.isThisSyntaxAdded = true) {
+            next();
+        }
+    }
+}

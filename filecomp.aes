@@ -9,6 +9,7 @@ export(sys mayos.explorer.fileextension.aesl) {
         extension = ".aesl";
         aeFileId = "may/sys./aesl";
         type = "-edit -read -write:exclude(-sys) -exec";
+        aeFileDataC = "/aesl/syntax/";
     }
     fileData *.aesl {
         code syntax {
